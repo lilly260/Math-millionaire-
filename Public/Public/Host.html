@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Host Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+  <div class="host-box">
+    <h2>Create Quiz with Multiple Rounds</h2>
+    <input id="quizTitle" placeholder="Quiz Title"/>
+    <button id="addRoundBtn">Add Round</button>
+    <div id="roundsContainer"></div>
+    <div>
+      <label><input type="checkbox" id="use5050"/> Enable 50:50</label>
+      <label><input type="checkbox" id="useDouble"/> Enable Double Dip</label>
+      <label><input type="checkbox" id="multiplayerToggle"/> Multiplayer Mode</label>
+    </div>
+    <button id="startQuizBtn">Start Quiz</button>
+    <div id="notifications"></div>
+    <h3>Participant Screens (Single‑Player)</h3>
+    <div id="participantScreens"></div>
+    <h3>Leaderboard</h3>
+    <select id="sortBy">
+      <option value="points">Points</option>
+      <option value="accuracy">Accuracy</option>
+      <option value="timeTaken">Time Taken</option>
+      <option value="lifelines">Lifelines Used</option>
+    </select>
+    <div id="leaderboardWrapper">
+      <table id="leaderboardTable">
+        <thead>
+          <tr><th>#</th><th>Name</th><th>School</th><th>Points</th><th>Accuracy</th><th>Time</th><th>Lifelines</th></tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+    </div>
+    <button onclick="downloadLeaderboardPDF()">Export Leaderboard PDF</button>
+  </div>
+  <script src="host.js"></script>
+</body>
+</html>
