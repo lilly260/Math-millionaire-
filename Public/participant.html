@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2 id="quiz-title">Quiz</h2>
+    <div id="timer">Time: <span id="time-remaining"></span>s</div>
+    <div id="question-text"></div>
+    <img id="question-image" style="max-width:90%; margin:10px auto; display:none;"/>
+    <div id="options"></div>
+    <div id="lifeline-buttons">
+      <button id="btn5050">50:50</button>
+      <button id="btndouble">Double Dip</button>
+    </div>
+    <div id="feedback" style="margin-top:10px; color:gold; font-weight:bold;"></div>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>
