@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, navy, indigo, darkviolet);
+  color: gold;
+  text-align: center;
+  padding: 1rem;
+}
+.quiz-box, .host-box, .quiz-container, .results {
+  background: rgba(0,0,0,0.7);
+  max-width: 800px;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px #ffd70088;
+}
+input, textarea, select, button {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 10px auto;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #3c486b;
+  color: gold;
+}
+button:hover { background: #536488; cursor: pointer; }
+.option-btn {
+  display: block;
+  width: 80%;
+  margin: .5rem auto;
+  padding: 12px;
+  background: linear-gradient(to right,#333366,#442266);
+  color: white;
+  border: 2px solid gold;
+  border-radius: 8px;
+}
+.option-btn:hover {
+  background: gold;
+  color: black;
+}
+.notification {
+  background: gold;
+  color: #1f4068;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+#leaderboardTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+#leaderboardTable th, td {
+  border: 1px solid #536488;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+@media(max-width:768px) {
+  input, button, textarea { width: 100%; }
+}
